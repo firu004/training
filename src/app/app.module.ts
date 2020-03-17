@@ -1,18 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-import { GroupComponent } from './group/group.component';
+import { InputDemoComponent } from './input-demo/input-demo.component';
+import { OutputDemoComponent } from './output-demo/output-demo.component';
+import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.component';
+import { NgContentAndContentChildDemoComponent } from './ng-content-and-content-child-demo/ng-content-and-content-child-demo.component';
+import { DataBindigDemoComponent } from './data-bindig-demo/data-bindig-demo.component';
+import { EventBindigDemoComponent } from './event-bindig-demo/event-bindig-demo.component';
+import { AttributeDirectiveDemoDirective } from './attribute-directive-demo.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    GroupComponent
+    InputDemoComponent,
+    OutputDemoComponent,
+    ViewChildDemoComponent,
+    NgContentAndContentChildDemoComponent,
+    DataBindigDemoComponent,
+    EventBindigDemoComponent,
+    AttributeDirectiveDemoDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

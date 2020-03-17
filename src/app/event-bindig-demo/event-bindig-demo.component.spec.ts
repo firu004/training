@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GroupComponent } from './group.component';
+import { EventBindigDemoComponent } from './event-bindig-demo.component';
 
-describe('GroupComponent', () => {
-  let component: GroupComponent;
-  let fixture: ComponentFixture<GroupComponent>;
+describe('EventBindigDemoComponent', () => {
+  let component: EventBindigDemoComponent;
+  let fixture: ComponentFixture<EventBindigDemoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GroupComponent ]
+      declarations: [ EventBindigDemoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GroupComponent);
+    fixture = TestBed.createComponent(EventBindigDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

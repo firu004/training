@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app-one';
+  message: string = 'Hello Angular 9+';
+  someTextThroughComponentProperty = 'This is text binding through host component variable as input binding';
+  variableToCaptureOutputEventInfo: string;
+
+  handleSomethingChanged(event: any){
+    this.variableToCaptureOutputEventInfo = event;
+  }
 }

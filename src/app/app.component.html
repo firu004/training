@@ -1,40 +1,28 @@
-<!-- <div>
-  Hello Angular 
+<div class="container" appAttributeDirectiveDemo>
+  <h1 class="display-4">App component</h1>
 </div>
-<button class="btn btn-primary">Ok</button>
-<app-user></app-user>
-<app-group></app-group> -->
-<!-- 
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button> -->
 
-<div class="container">
-  <div class="jumbotron">
-    <h1 class="display-3" >Hello, Angular!</h1>
-    <p class="lead" appHighlight>Created this component manually for fun</p>
+<app-data-bindig-demo></app-data-bindig-demo>
+
+<app-event-bindig-demo></app-event-bindig-demo>
+
+<app-input-demo someText="This is direct text binding through component input"></app-input-demo>
+
+<app-input-demo [someText]="someTextThroughComponentProperty"></app-input-demo>
+
+<app-output-demo (somethingChanged)="handleSomethingChanged($event)"></app-output-demo>
+<div class="container" appAttributeDirectiveDemo>
+  This is coming from Output demo component to App component 
+  <div style="background-color: lightgoldenrodyellow;margin-bottom: 10px;">
+    {{variableToCaptureOutputEventInfo}}
   </div>
-  <!-- <div class="row">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Component One</h5>
-          <p class="card-text">Some quick example component created using CLI.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Component One</h5>
-          <p class="card-text">Some quick example component created using CLI.</p>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </div>
+
+<app-view-child-demo></app-view-child-demo>
+
+<app-ng-content-and-content-child-demo>
+  <app-input-demo someText="I am component sitting in content projection of another component"></app-input-demo>
+  <div #contentChildRefVariable>
+    This is for content child demo and accessing this will apply background color
+  </div>
+</app-ng-content-and-content-child-demo>

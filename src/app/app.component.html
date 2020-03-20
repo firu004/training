@@ -1,4 +1,4 @@
-<div class="container" appAttributeDirectiveDemo>
+<div class="container" [ngStyle]="{'background-color': false ? 'red': 'black'}">
   <h1 class="display-4">App component</h1>
 </div>
 
@@ -12,7 +12,7 @@
 
 <app-output-demo (somethingChanged)="handleSomethingChanged($event)"></app-output-demo>
 <div class="container" appAttributeDirectiveDemo>
-  This is coming from Output demo component to App component 
+  This is coming from Output demo component to App component
   <div style="background-color: lightgoldenrodyellow;margin-bottom: 10px;">
     {{variableToCaptureOutputEventInfo}}
   </div>
@@ -26,3 +26,26 @@
     This is for content child demo and accessing this will apply background color
   </div>
 </app-ng-content-and-content-child-demo>
+
+<app-demo-built-in-directives></app-demo-built-in-directives>
+
+<div class="container" appAttributeDirectiveDemo>
+  <div class="row">
+    This is structral directive demo
+  </div>
+  <div class="row">
+    <div class="col" *appStructuralDirectiveDemo="let inputFromDirective = number" views="6">
+      view {{inputFromDirective}}
+    </div>
+  </div>
+</div>
+
+<div class="container" appAttributeDirectiveDemo>
+  <app-life-cycle-demo *ngIf="ngDestroyDemoVariable" inputText="some text to trigger ngOnChanges">
+    <div>Content of life cycle demo component</div>
+  </app-life-cycle-demo>
+
+  <div (click)="ngDestroyDemoVariable = !ngDestroyDemoVariable">
+    <h3>ngOnDestory gets called after this element click and the component gets destroyed</h3>
+  </div>
+</div>

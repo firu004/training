@@ -10,6 +10,10 @@ import { NgContentAndContentChildDemoComponent } from './ng-content-and-content-
 import { DataBindigDemoComponent } from './data-bindig-demo/data-bindig-demo.component';
 import { EventBindigDemoComponent } from './event-bindig-demo/event-bindig-demo.component';
 import { AttributeDirectiveDemoDirective } from './attribute-directive-demo.directive';
+import { HostListenerHostBindingDirective } from './host-listener-host-binding.directive';
+import { DemoBuiltInDirectivesComponent } from './demo-built-in-directives/demo-built-in-directives.component';
+import { StructuralDirectiveDemoDirective } from './structural-directive-demo.directive';
+import { LifeCycleDemoComponent } from './life-cycle-demo/life-cycle-demo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { AttributeDirectiveDemoDirective } from './attribute-directive-demo.dire
     NgContentAndContentChildDemoComponent,
     DataBindigDemoComponent,
     EventBindigDemoComponent,
-    AttributeDirectiveDemoDirective
+    AttributeDirectiveDemoDirective,
+    HostListenerHostBindingDirective,
+    DemoBuiltInDirectivesComponent,
+    StructuralDirectiveDemoDirective,
+    LifeCycleDemoComponent
   ],
   imports: [
     BrowserModule,

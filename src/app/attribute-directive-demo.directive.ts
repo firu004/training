@@ -15,5 +15,4 @@ export class AttributeDirectiveDemoDirective {
     // this is example to access element through ElementRef which is NOT RECOMMENDED
     //this.el.nativeElement.style.backgroundColor = 'red';
   }
-
 }

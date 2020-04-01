@@ -1,0 +1,50 @@
+<div class="container" appAttributeDirectiveDemo>
+
+    <div class="row" style="padding: 20px;">
+        <div class="col">
+            <span *ngIf="ngIfVariable">This areas gets displayed based on ngIfVariable and this is a ngIf demo</span>
+        </div>
+        <div class="col" (click)="showHideElement()">
+            <button class="btn btn-primary">Toggle Display</button>
+        </div>
+    </div>
+    <hr class="divider" />
+
+
+    <div class="row">
+        <div class="display-5" class="col">Users List (*ngFor) Demo</div>
+        <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let user of users">
+                    <div>Name</div> {{user.name}}
+                    <div>Role</div> {{user.role}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="divider"></div>
+
+    <div>
+        <div class="display-4" class="row">
+            ngSwitch Demo
+        </div>
+        <div class="row">
+            <button class="col btn btn-primary" style="margin-right: 10px;" (click)="switchCaseVariable = 1">Case
+                1</button>
+            <button class="col btn btn-primary" style="margin-right: 10px;" (click)="switchCaseVariable = 2">Case
+                2</button>
+            <button class="col btn btn-primary" style="margin-right: 10px;" (click)="switchCaseVariable = 3">Case
+                3</button>
+            <button class="col btn btn-primary" style="margin-right: 10px;"
+                (click)="switchCaseVariable = undefined">Case Default</button>
+        </div>
+        <div class="row">
+            <div [ngSwitch]="switchCaseVariable">
+                <div *ngSwitchCase="1" class="display-4">Case 1 Element</div>
+                <div *ngSwitchCase="2">Case 2 Element</div>
+                <div *ngSwitchCase="3">Case 3 Element</div>
+                <div *ngSwitchDefault>Default Case Element Displayed</div>
+            </div>
+        </div>
+    </div>
+</div>

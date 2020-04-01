@@ -22,7 +22,7 @@ export class StructuralDirectiveDemoDirective {
 
     for(let i=1; i<= this.views; i++){
       // the second argument is context which can be used in the template
-      this.vc.createEmbeddedView(this.tr, { number: i });
+      this.vc.createEmbeddedView(this.tr, { ctx: i });
     }
 
   }
